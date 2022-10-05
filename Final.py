@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from numpy import linalg
 from numpy import *
+import random
+import sys
 
 #here I make AM
 
@@ -54,10 +56,11 @@ Z = linalg.matrix_power(m.a_matrix(), 30)
 f = 0.
 for i in range(int(m.n**2)):
     f= f + (Z[int(m.n**2/2)][i])
-p=[]
+
+p = []
 for i in range(int(m.n**2)):
         p.append(i)
-        p.append(Z[int(m.n**2/2)][i]*(100000/f))
+        p.append(Z[int(m.n**2/2)][i]*(1000/f))
 q = np.reshape(p, (int(m.n**2), 2))
 np.savetxt('adjacent_matrix.txt', X= q, fmt = '%1.9f', newline = '\n')
 
@@ -128,26 +131,26 @@ class Particles:
             r.append(h[1])
             r.append(h[2])
         l4 = np.reshape(r, (len(grid), 3))
-
+        d = []
         for a in range(len(grid)):
             b.append(a)
         for a in grid:
-            c.append(a[2])
+            d.append(a[2])
         for z in range(len(grid)):
             t.append(b[z])
-            t.append(c[z])
-            t.append(Z[int(len(grid)/2)][z]*(100000/f))
-            o.append(b[z])
-            o.append(c[z]-Z[int(len(grid)/2)][z]*(1000/f))
+            t.append(d[z])
+            if d[z] != 0:
+                t.append(Z[int(len(grid)/2)][z]*(1000/f))
+            else:
+                t.append(0)
 
         l3 = np.reshape(t, (len(grid), 3))
-        l5 = np.reshape(o, (len(grid), 2))
+
         np.savetxt('hparticles1.txt', X=l1, fmt='%1.0f', newline='\n')
         np.savetxt('hparticles2.txt', X=l2, fmt='%1.0f', newline='\n')
         np.savetxt('g.txt', X=l3, fmt='%1.0f', newline='\n')
         np.savetxt('gri.txt', X=l4, fmt='%1.0f', newline='\n')
-        np.savetxt('o.txt', X=l5, fmt='%1.0f', newline='\n')
 
-m = Particles(100000)
+
+m = Particles(1000)
 m.randw(30)
-
