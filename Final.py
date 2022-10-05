@@ -57,7 +57,7 @@ for i in range(int(m.n**2)):
 
 for i in range(int(m.n**2)):
         k.append(i)
-        k.append(Z[int(m.n**2/2)][i]*(1000/f))
+        k.append(Z[int(m.n**2/2)][i]*(100000/f))
 j = np.reshape(k, (int(m.n**2), 2))
 np.savetxt('adjacent_matrix.txt', X= j, fmt = '%1.9f', newline = '\n')
 
@@ -138,7 +138,7 @@ class Particles:
         for z in range(len(grid)):
             t.append(b[z])
             t.append(c[z])
-            t.append(Z[int(len(grid)/2)][z]*(1000/f))
+            t.append(Z[int(len(grid)/2)][z]*(100000/f))
             o.append(b[z])
             o.append(c[z]-Z[int(len(grid)/2)][z]*(1000/f))
 
