@@ -97,7 +97,6 @@ class Particles:
         c = []
         t = []
         o = []
-        f = 0.
 
         for i in self.particles:
             i.dynamics(steps1)
@@ -128,7 +127,6 @@ class Particles:
             r.append(h[0])
             r.append(h[1])
             r.append(h[2])
-            f += h[2]
         l4 = np.reshape(r, (len(grid), 3))
 
         for a in range(len(grid)):
