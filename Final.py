@@ -56,10 +56,10 @@ for i in range(int(m.n**2)):
     f= f + (Z[int(m.n**2/2)][i])
 
 for i in range(int(m.n**2)):
-        k.append(i)
-        k.append(Z[int(m.n**2/2)][i]*(100000/f))
-j = np.reshape(k, (int(m.n**2), 2))
-np.savetxt('adjacent_matrix.txt', X= j, fmt = '%1.9f', newline = '\n')
+        p.append(i)
+        p.append(Z[int(m.n**2/2)][i]*(100000/f))
+q = np.reshape(p, (int(m.n**2), 2))
+np.savetxt('adjacent_matrix.txt', X= q, fmt = '%1.9f', newline = '\n')
 
 #here I simulate the random walk
 
