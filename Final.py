@@ -54,7 +54,7 @@ Z = linalg.matrix_power(m.a_matrix(), 30)
 f = 0.
 for i in range(int(m.n**2)):
     f= f + (Z[int(m.n**2/2)][i])
-
+p=[]
 for i in range(int(m.n**2)):
         p.append(i)
         p.append(Z[int(m.n**2/2)][i]*(100000/f))
