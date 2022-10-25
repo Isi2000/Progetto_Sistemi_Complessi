@@ -1,3 +1,3 @@
 # Progetto_Sistemi_Complessi
 
-Il file grid con giova e' stato la bozza del progetto e rappresenta l'andamento ideale ottenuto in maniera abbastanza grossolana
+Questo modello consente una analisi di modelli a diffusione con link fra elementi piu' complicati. Dal punto di vista computazionale e' peggio, il processo pero' e' piu' generale
