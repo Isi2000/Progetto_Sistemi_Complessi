@@ -6,7 +6,7 @@ from numpy import *
 import random
 import sys
 
-#here I make AM
+#here I make Adjacent Matrix
 
 class Matrix:
     def __init__(self,n):
@@ -145,7 +145,7 @@ class Particles:
                 t.append(0)
 
         l3 = np.reshape(t, (len(grid), 3))
-
+        
         np.savetxt('hparticles1.txt', X=l1, fmt='%1.0f', newline='\n')
         np.savetxt('hparticles2.txt', X=l2, fmt='%1.0f', newline='\n')
         np.savetxt('g.txt', X=l3, fmt='%1.0f', newline='\n')
